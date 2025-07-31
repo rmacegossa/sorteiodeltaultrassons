@@ -1,6 +1,5 @@
 // Configuração do Webhook
-// Substitua pela URL do seu webhook
-export const WEBHOOK_URL = 'SEU_WEBHOOK_URL_AQUI'
+export const WEBHOOK_URL = 'https://evolution-n8n.gzamte.easypanel.host/webhook-test/sorteio-deltaultrassons'
 
 // Função para enviar dados para o webhook
 export const sendToWebhook = async (data: any) => {

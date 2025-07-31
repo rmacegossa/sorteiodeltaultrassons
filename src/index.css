@@ -1,0 +1,51 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import '@fontsource/inter';
+@import '@fontsource/dm-serif-display';
+@import '@fontsource/roboto';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #555555;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #044C84;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-delta-blue hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105;
+    background-color: #044C84;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-delta-blue border-2 border-delta-blue font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, #044C84 0%, #044C84 100%);
+  }
+
+  .title-delta {
+    @apply font-roboto font-thin text-delta-blue;
+  }
+
+  .text-delta {
+    @apply font-roboto font-light text-delta-text;
+  }
+} 

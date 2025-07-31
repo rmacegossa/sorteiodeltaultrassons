@@ -19,7 +19,7 @@ const ThankYou = () => {
             📅 Data do Sorteio
           </h2>
           <p className="text-2xl font-bold text-delta-blue mb-4">
-            15 de agosto de 2024
+            15 de agosto de 2025
           </p>
           <p className="text-delta-text mb-6">
             O sorteio será realizado e o vencedor será anunciado nesta data.

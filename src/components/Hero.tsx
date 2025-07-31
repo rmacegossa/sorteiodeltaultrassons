@@ -28,7 +28,7 @@ const Hero = () => {
               Uma <strong>Lavadora Ultrassônica Tabletop</strong> da Delta Ultrassons
             </p>
             <div className="text-sm opacity-90 text-white">
-              <p>📅 Sorteio: 15 de agosto de 2024</p>
+              <p>📅 Sorteio: 15 de agosto de 2025</p>
             </div>
           </div>
           <a 

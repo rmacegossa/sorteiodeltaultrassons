@@ -97,7 +97,7 @@ const Form = ({ onSuccess }: FormProps) => {
             <h3 className="text-xl font-semibold text-delta-blue mb-4">🏆 Prêmio do Sorteio</h3>
             <p className="text-lg text-delta-text mb-2">Lavadora Ultrassônica Tabletop Delta Ultrassons</p>
             <p className="text-delta-text font-semibold text-delta-blue">✨ Garanta sua participação agora!</p>
-            <p className="text-sm text-delta-text mt-2">📅 Sorteio: 15 de agosto de 2024</p>
+            <p className="text-sm text-delta-text mt-2">📅 Sorteio: 15 de agosto de 2025</p>
           </div>
         </div>
 
@@ -216,7 +216,7 @@ const Form = ({ onSuccess }: FormProps) => {
             </div>
 
             <div className="text-center text-sm text-gray-600">
-              <p>📅 Sorteio será realizado no dia 15 de agosto de 2024</p>
+              <p>📅 Sorteio será realizado no dia 15 de agosto de 2025</p>
               <p>🎯 O vencedor será notificado por e-mail e telefone</p>
             </div>
           </form>

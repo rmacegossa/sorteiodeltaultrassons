@@ -15,6 +15,13 @@ interface FormProps {
   onSuccess: () => void
 }
 
+// Declaração global para o Facebook Pixel
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 const Form = ({ onSuccess }: FormProps) => {
   const [formData, setFormData] = useState<FormData>({
     nome: '',
@@ -62,6 +69,24 @@ const Form = ({ onSuccess }: FormProps) => {
         data_inscricao: new Date().toISOString(),
         sorteio: 'Delta Ultrassons - Tabletop'
       })
+      
+      // Tracking do Facebook Pixel - Lead
+      if (typeof window !== 'undefined' && window.fbq) {
+        window.fbq('track', 'Lead', {
+          value: 500, // Valor estimado do lead
+          currency: 'BRL',
+          content_name: 'Sorteio Tabletop Delta Ultrassons',
+          content_category: 'Sorteio'
+        });
+        
+        // Tracking de evento personalizado
+        window.fbq('track', 'CompleteRegistration', {
+          content_name: 'Sorteio Tabletop',
+          content_category: 'Sorteio',
+          value: 500,
+          currency: 'BRL'
+        });
+      }
       
       toast.success('Inscrição realizada com sucesso! Boa sorte!')
       onSuccess()

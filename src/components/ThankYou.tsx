@@ -1,4 +1,34 @@
+import { useEffect } from 'react'
+
+// Declaração global para o Facebook Pixel
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 const ThankYou = () => {
+  // Tracking da visualização da página de agradecimento
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      // Tracking de visualização de conteúdo
+      window.fbq('track', 'ViewContent', {
+        content_name: 'Página de Agradecimento - Sorteio',
+        content_category: 'Sorteio',
+        value: 500,
+        currency: 'BRL'
+      });
+      
+      // Tracking de evento personalizado
+      window.fbq('track', 'ThankYouPage', {
+        content_name: 'Agradecimento Sorteio',
+        content_category: 'Sorteio',
+        value: 500,
+        currency: 'BRL'
+      });
+    }
+  }, []);
+
   return (
     <section className="py-20 bg-white min-h-screen flex items-center">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
